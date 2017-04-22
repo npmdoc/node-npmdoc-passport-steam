@@ -1,0 +1,1366 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/liamcurry/passport-steam#readme">passport-steam (v1.0.8)</a>
+</h1>
+<h4>Steam (OpenID) authentication strategy for Passport.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-steam">module passport-steam</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.passport-steam">
+            function <span class="apidocSignatureSpan"></span>passport-steam
+            <span class="apidocSignatureSpan">(options, validate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.Strategy">
+            function <span class="apidocSignatureSpan">passport-steam.</span>Strategy
+            <span class="apidocSignatureSpan">(options, validate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_">
+            function <span class="apidocSignatureSpan">passport-steam.</span>super_
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.InternalOpenIDError">
+            function <span class="apidocSignatureSpan">passport-steam.</span>super_.InternalOpenIDError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.super_">
+            function <span class="apidocSignatureSpan">passport-steam.</span>super_.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-steam.</span>super_.InternalOpenIDError.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-steam.</span>super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-steam.</span>super_.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">passport-steam.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-steam.Strategy">module passport-steam.Strategy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.Strategy.Strategy">
+            function <span class="apidocSignatureSpan">passport-steam.</span>Strategy
+            <span class="apidocSignatureSpan">(options, validate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.Strategy.super_">
+            function <span class="apidocSignatureSpan">passport-steam.Strategy.</span>super_
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">passport-steam.Strategy.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-steam.super_">module passport-steam.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.super_">
+            function <span class="apidocSignatureSpan">passport-steam.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.BadRequestError">
+            function <span class="apidocSignatureSpan">passport-steam.super_.</span>BadRequestError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.InternalOpenIDError">
+            function <span class="apidocSignatureSpan">passport-steam.super_.</span>InternalOpenIDError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.Strategy">
+            function <span class="apidocSignatureSpan">passport-steam.super_.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.discover">
+            function <span class="apidocSignatureSpan">passport-steam.super_.</span>discover
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-steam.super_.InternalOpenIDError">module passport-steam.super_.InternalOpenIDError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.InternalOpenIDError.InternalOpenIDError">
+            function <span class="apidocSignatureSpan">passport-steam.super_.</span>InternalOpenIDError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-steam.super_.InternalOpenIDError.prototype">module passport-steam.super_.InternalOpenIDError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.InternalOpenIDError.prototype.toString">
+            function <span class="apidocSignatureSpan">passport-steam.super_.InternalOpenIDError.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-steam.super_.prototype">module passport-steam.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype._parseOAuthExt">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>_parseOAuthExt
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype._parsePAPEExt">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>_parsePAPEExt
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype._parseProfileExt">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>_parseProfileExt
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype.loadAssociation">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>loadAssociation
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype.loadDiscoveredInfo">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>loadDiscoveredInfo
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype.loadDiscoveredInformation">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>loadDiscoveredInformation
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype.saveAssociation">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>saveAssociation
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype.saveDiscoveredInfo">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>saveDiscoveredInfo
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.prototype.saveDiscoveredInformation">
+            function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>saveDiscoveredInformation
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-steam.super_.super_">module passport-steam.super_.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.super_.super_">
+            function <span class="apidocSignatureSpan">passport-steam.super_.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.super_.Strategy">
+            function <span class="apidocSignatureSpan">passport-steam.super_.super_.</span>Strategy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-steam.super_.super_.prototype">module passport-steam.super_.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-steam.super_.super_.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-steam.super_.super_.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-steam" id="apidoc.module.passport-steam">module passport-steam</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.passport-steam" id="apidoc.element.passport-steam.passport-steam">
+        function <span class="apidocSignatureSpan"></span>passport-steam
+        <span class="apidocSignatureSpan">(options, validate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, validate) {
+  options = options || {};
+  options.providerURL = options.providerURL || 'http://steamcommunity.com/openid';
+  options.profile =  (options.profile === undefined) ? true : options.profile;
+  options.stateless = true; //Steam only works as a stateless OpenID
+
+  var originalPassReqToCallback = options.passReqToCallback;
+  options.passReqToCallback = true; //Request needs to be verified
+
+  function verify(req, identifier, profile, done) {
+    var validOpEndpoint = 'https://steamcommunity.com/openid/login';
+    var identifierRegex = /^http:\/\/steamcommunity\.com\/openid\/id\/(\d+)$/;
+
+    if(req.query['openid.op_endpoint'] !== validOpEndpoint ||
+       !identifierRegex.test(identifier)) {
+      return done(null, false, { message: 'Claimed identity is invalid.' });
+    }
+
+    var steamID = identifierRegex.exec(identifier)[0];
+
+    if(options.profile) {
+      getUserProfile(options.apiKey, steamID, function(err, profile) {
+        if(err) {
+          done(err);
+        } else {
+          if(originalPassReqToCallback) {
+            validate(req, identifier, profile, done);
+          } else {
+            validate(identifier, profile, done);
+          }
+        }
+      });
+    } else {
+      if(originalPassReqToCallback) {
+        validate(req, identifier, profile, done);
+      } else {
+        validate(identifier, profile, done);
+      }
+    }
+  }
+
+  OpenIDStrategy.call(this, options, verify);
+
+  this.name = 'steam';
+  this.stateless = options.stateless;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.Strategy" id="apidoc.element.passport-steam.Strategy">
+        function <span class="apidocSignatureSpan">passport-steam.</span>Strategy
+        <span class="apidocSignatureSpan">(options, validate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, validate) {
+  options = options || {};
+  options.providerURL = options.providerURL || 'http://steamcommunity.com/openid';
+  options.profile =  (options.profile === undefined) ? true : options.profile;
+  options.stateless = true; //Steam only works as a stateless OpenID
+
+  var originalPassReqToCallback = options.passReqToCallback;
+  options.passReqToCallback = true; //Request needs to be verified
+
+  function verify(req, identifier, profile, done) {
+    var validOpEndpoint = 'https://steamcommunity.com/openid/login';
+    var identifierRegex = /^http:\/\/steamcommunity\.com\/openid\/id\/(\d+)$/;
+
+    if(req.query['openid.op_endpoint'] !== validOpEndpoint ||
+       !identifierRegex.test(identifier)) {
+      return done(null, false, { message: 'Claimed identity is invalid.' });
+    }
+
+    var steamID = identifierRegex.exec(identifier)[0];
+
+    if(options.profile) {
+      getUserProfile(options.apiKey, steamID, function(err, profile) {
+        if(err) {
+          done(err);
+        } else {
+          if(originalPassReqToCallback) {
+            validate(req, identifier, profile, done);
+          } else {
+            validate(identifier, profile, done);
+          }
+        }
+      });
+    } else {
+      if(originalPassReqToCallback) {
+        validate(req, identifier, profile, done);
+      } else {
+        validate(identifier, profile, done);
+      }
+    }
+  }
+
+  OpenIDStrategy.call(this, options, verify);
+
+  this.name = 'steam';
+  this.stateless = options.stateless;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_" id="apidoc.element.passport-steam.super_">
+        function <span class="apidocSignatureSpan">passport-steam.</span>super_
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  if (!options.returnURL) throw new Error('OpenID authentication requires a returnURL option');
+  if (!verify) throw new Error('OpenID authentication strategy requires a verify callback');
+
+  passport.Strategy.call(this);
+  this.name = 'openid';
+  this._verify = verify;
+  this._profile = options.profile;
+  this._pape = options.pape;
+  this._passReqToCallback = options.passReqToCallback;
+
+  var extensions = [];
+  if (options.profile) {
+    var sreg = new openid.SimpleRegistration({
+      "fullname" : true,
+      "nickname" : true,
+      "email" : true,
+      "dob" : true,
+      "gender" : true,
+      "postcode" : true,
+      "country" : true,
+      "timezone" : true,
+      "language" : true
+    });
+    extensions.push(sreg);
+  }
+  if (options.profile) {
+    var ax = new openid.AttributeExchange({
+      "http://axschema.org/namePerson" : "required",
+      "http://axschema.org/namePerson/first": "required",
+      "http://axschema.org/namePerson/last": "required",
+      "http://axschema.org/contact/email": "required"
+    });
+    extensions.push(ax);
+  }
+
+  if (options.ui) {
+    // ui: { mode: 'popup', icon: true, lang: 'fr-FR' }
+    var ui = new openid.UserInterface(options.ui);
+    extensions.push(ui);
+  }
+
+  if (options.pape) {
+    var papeOptions = {};
+    if (options.pape.hasOwnProperty("maxAuthAge")) {
+      papeOptions.max_auth_age = options.pape.maxAuthAge;
+	  }
+    if (options.pape.preferredAuthPolicies) {
+      if (typeof options.pape.preferredAuthPolicies === "string") {
+        papeOptions.preferred_auth_policies = options.pape.preferredAuthPolicies;
+      } else if (Array.isArray(options.pape.preferredAuthPolicies)) {
+        papeOptions.preferred_auth_policies = options.pape.preferredAuthPolicies.join(" ");
+      }
+    }
+    var pape = new openid.PAPE(papeOptions);
+    extensions.push(pape);
+  }
+
+  if (options.oauth) {
+    var oauthOptions = {};
+    oauthOptions.consumerKey = options.oauth.consumerKey;
+    oauthOptions.scope = options.oauth.scope;
+
+    var oauth = new openid.OAuthHybrid(oauthOptions);
+    extensions.push(oauth);
+  }
+
+  this._relyingParty = new openid.RelyingParty(
+    options.returnURL,
+    options.realm,
+    (options.stateless === undefined) ? false : options.stateless,
+    (options.secure === undefined) ? true : options.secure,
+    extensions);
+
+  this._providerURL = options.providerURL;
+  this._identifierField = options.identifierField || 'openid_identifier';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.InternalOpenIDError" id="apidoc.element.passport-steam.super_.InternalOpenIDError">
+        function <span class="apidocSignatureSpan">passport-steam.</span>super_.InternalOpenIDError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOpenIDError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, arguments.callee);
+  this.name = 'InternalOpenIDError';
+  this.message = message;
+  this.openidError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.super_" id="apidoc.element.passport-steam.super_.super_">
+        function <span class="apidocSignatureSpan">passport-steam.</span>super_.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-steam.Strategy" id="apidoc.module.passport-steam.Strategy">module passport-steam.Strategy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.Strategy.Strategy" id="apidoc.element.passport-steam.Strategy.Strategy">
+        function <span class="apidocSignatureSpan">passport-steam.</span>Strategy
+        <span class="apidocSignatureSpan">(options, validate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, validate) {
+  options = options || {};
+  options.providerURL = options.providerURL || 'http://steamcommunity.com/openid';
+  options.profile =  (options.profile === undefined) ? true : options.profile;
+  options.stateless = true; //Steam only works as a stateless OpenID
+
+  var originalPassReqToCallback = options.passReqToCallback;
+  options.passReqToCallback = true; //Request needs to be verified
+
+  function verify(req, identifier, profile, done) {
+    var validOpEndpoint = 'https://steamcommunity.com/openid/login';
+    var identifierRegex = /^http:\/\/steamcommunity\.com\/openid\/id\/(\d+)$/;
+
+    if(req.query['openid.op_endpoint'] !== validOpEndpoint ||
+       !identifierRegex.test(identifier)) {
+      return done(null, false, { message: 'Claimed identity is invalid.' });
+    }
+
+    var steamID = identifierRegex.exec(identifier)[0];
+
+    if(options.profile) {
+      getUserProfile(options.apiKey, steamID, function(err, profile) {
+        if(err) {
+          done(err);
+        } else {
+          if(originalPassReqToCallback) {
+            validate(req, identifier, profile, done);
+          } else {
+            validate(identifier, profile, done);
+          }
+        }
+      });
+    } else {
+      if(originalPassReqToCallback) {
+        validate(req, identifier, profile, done);
+      } else {
+        validate(identifier, profile, done);
+      }
+    }
+  }
+
+  OpenIDStrategy.call(this, options, verify);
+
+  this.name = 'steam';
+  this.stateless = options.stateless;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.Strategy.super_" id="apidoc.element.passport-steam.Strategy.super_">
+        function <span class="apidocSignatureSpan">passport-steam.Strategy.</span>super_
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  if (!options.returnURL) throw new Error('OpenID authentication requires a returnURL option');
+  if (!verify) throw new Error('OpenID authentication strategy requires a verify callback');
+
+  passport.Strategy.call(this);
+  this.name = 'openid';
+  this._verify = verify;
+  this._profile = options.profile;
+  this._pape = options.pape;
+  this._passReqToCallback = options.passReqToCallback;
+
+  var extensions = [];
+  if (options.profile) {
+    var sreg = new openid.SimpleRegistration({
+      "fullname" : true,
+      "nickname" : true,
+      "email" : true,
+      "dob" : true,
+      "gender" : true,
+      "postcode" : true,
+      "country" : true,
+      "timezone" : true,
+      "language" : true
+    });
+    extensions.push(sreg);
+  }
+  if (options.profile) {
+    var ax = new openid.AttributeExchange({
+      "http://axschema.org/namePerson" : "required",
+      "http://axschema.org/namePerson/first": "required",
+      "http://axschema.org/namePerson/last": "required",
+      "http://axschema.org/contact/email": "required"
+    });
+    extensions.push(ax);
+  }
+
+  if (options.ui) {
+    // ui: { mode: 'popup', icon: true, lang: 'fr-FR' }
+    var ui = new openid.UserInterface(options.ui);
+    extensions.push(ui);
+  }
+
+  if (options.pape) {
+    var papeOptions = {};
+    if (options.pape.hasOwnProperty("maxAuthAge")) {
+      papeOptions.max_auth_age = options.pape.maxAuthAge;
+	  }
+    if (options.pape.preferredAuthPolicies) {
+      if (typeof options.pape.preferredAuthPolicies === "string") {
+        papeOptions.preferred_auth_policies = options.pape.preferredAuthPolicies;
+      } else if (Array.isArray(options.pape.preferredAuthPolicies)) {
+        papeOptions.preferred_auth_policies = options.pape.preferredAuthPolicies.join(" ");
+      }
+    }
+    var pape = new openid.PAPE(papeOptions);
+    extensions.push(pape);
+  }
+
+  if (options.oauth) {
+    var oauthOptions = {};
+    oauthOptions.consumerKey = options.oauth.consumerKey;
+    oauthOptions.scope = options.oauth.scope;
+
+    var oauth = new openid.OAuthHybrid(oauthOptions);
+    extensions.push(oauth);
+  }
+
+  this._relyingParty = new openid.RelyingParty(
+    options.returnURL,
+    options.realm,
+    (options.stateless === undefined) ? false : options.stateless,
+    (options.secure === undefined) ? true : options.secure,
+    extensions);
+
+  this._providerURL = options.providerURL;
+  this._identifierField = options.identifierField || 'openid_identifier';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-steam.super_" id="apidoc.module.passport-steam.super_">module passport-steam.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.super_" id="apidoc.element.passport-steam.super_.super_">
+        function <span class="apidocSignatureSpan">passport-steam.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.BadRequestError" id="apidoc.element.passport-steam.super_.BadRequestError">
+        function <span class="apidocSignatureSpan">passport-steam.super_.</span>BadRequestError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BadRequestError(message) {
+  Error.call(this);
+  Error.captureStackTrace(this, arguments.callee);
+  this.name = 'BadRequestError';
+  this.message = message || null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.InternalOpenIDError" id="apidoc.element.passport-steam.super_.InternalOpenIDError">
+        function <span class="apidocSignatureSpan">passport-steam.super_.</span>InternalOpenIDError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOpenIDError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, arguments.callee);
+  this.name = 'InternalOpenIDError';
+  this.message = message;
+  this.openidError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.Strategy" id="apidoc.element.passport-steam.super_.Strategy">
+        function <span class="apidocSignatureSpan">passport-steam.super_.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  if (!options.returnURL) throw new Error('OpenID authentication requires a returnURL option');
+  if (!verify) throw new Error('OpenID authentication strategy requires a verify callback');
+
+  passport.Strategy.call(this);
+  this.name = 'openid';
+  this._verify = verify;
+  this._profile = options.profile;
+  this._pape = options.pape;
+  this._passReqToCallback = options.passReqToCallback;
+
+  var extensions = [];
+  if (options.profile) {
+    var sreg = new openid.SimpleRegistration({
+      "fullname" : true,
+      "nickname" : true,
+      "email" : true,
+      "dob" : true,
+      "gender" : true,
+      "postcode" : true,
+      "country" : true,
+      "timezone" : true,
+      "language" : true
+    });
+    extensions.push(sreg);
+  }
+  if (options.profile) {
+    var ax = new openid.AttributeExchange({
+      "http://axschema.org/namePerson" : "required",
+      "http://axschema.org/namePerson/first": "required",
+      "http://axschema.org/namePerson/last": "required",
+      "http://axschema.org/contact/email": "required"
+    });
+    extensions.push(ax);
+  }
+
+  if (options.ui) {
+    // ui: { mode: 'popup', icon: true, lang: 'fr-FR' }
+    var ui = new openid.UserInterface(options.ui);
+    extensions.push(ui);
+  }
+
+  if (options.pape) {
+    var papeOptions = {};
+    if (options.pape.hasOwnProperty("maxAuthAge")) {
+      papeOptions.max_auth_age = options.pape.maxAuthAge;
+	  }
+    if (options.pape.preferredAuthPolicies) {
+      if (typeof options.pape.preferredAuthPolicies === "string") {
+        papeOptions.preferred_auth_policies = options.pape.preferredAuthPolicies;
+      } else if (Array.isArray(options.pape.preferredAuthPolicies)) {
+        papeOptions.preferred_auth_policies = options.pape.preferredAuthPolicies.join(" ");
+      }
+    }
+    var pape = new openid.PAPE(papeOptions);
+    extensions.push(pape);
+  }
+
+  if (options.oauth) {
+    var oauthOptions = {};
+    oauthOptions.consumerKey = options.oauth.consumerKey;
+    oauthOptions.scope = options.oauth.scope;
+
+    var oauth = new openid.OAuthHybrid(oauthOptions);
+    extensions.push(oauth);
+  }
+
+  this._relyingParty = new openid.RelyingParty(
+    options.returnURL,
+    options.realm,
+    (options.stateless === undefined) ? false : options.stateless,
+    (options.secure === undefined) ? true : options.secure,
+    extensions);
+
+  this._providerURL = options.providerURL;
+  this._identifierField = options.identifierField || 'openid_identifier';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.discover" id="apidoc.element.passport-steam.super_.discover">
+        function <span class="apidocSignatureSpan">passport-steam.super_.</span>discover
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">discover = function (fn) {
+  discoverers.push(fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-steam.super_.InternalOpenIDError" id="apidoc.module.passport-steam.super_.InternalOpenIDError">module passport-steam.super_.InternalOpenIDError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.InternalOpenIDError.InternalOpenIDError" id="apidoc.element.passport-steam.super_.InternalOpenIDError.InternalOpenIDError">
+        function <span class="apidocSignatureSpan">passport-steam.super_.</span>InternalOpenIDError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOpenIDError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, arguments.callee);
+  this.name = 'InternalOpenIDError';
+  this.message = message;
+  this.openidError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-steam.super_.InternalOpenIDError.prototype" id="apidoc.module.passport-steam.super_.InternalOpenIDError.prototype">module passport-steam.super_.InternalOpenIDError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.InternalOpenIDError.prototype.toString" id="apidoc.element.passport-steam.super_.InternalOpenIDError.prototype.toString">
+        function <span class="apidocSignatureSpan">passport-steam.super_.InternalOpenIDError.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  var m = this.message;
+  if (this.openidError) {
+    if (this.openidError instanceof Error) {
+      m += ' (' + this.openidError + ')';
+    }
+    else if (this.openidError.message) {
+      m += ' (message: ' + this.openidError.message + ')';
+    }
+  }
+  return m;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-steam.super_.prototype" id="apidoc.module.passport-steam.super_.prototype">module passport-steam.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype._parseOAuthExt" id="apidoc.element.passport-steam.super_.prototype._parseOAuthExt">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>_parseOAuthExt
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseOAuthExt = function (params) {
+  var oauth = {};
+  // parse OAuth parameters
+  if (params['request_token']) {
+  	oauth.requestToken = params['request_token'];
+  }
+  return oauth;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype._parsePAPEExt" id="apidoc.element.passport-steam.super_.prototype._parsePAPEExt">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>_parsePAPEExt
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parsePAPEExt = function (params) {
+  var pape = {};
+  // parse PAPE parameters
+  if (params['auth_policies']) {
+  	pape.authPolicies = params['auth_policies'].split(' ');
+  }
+  if (params['auth_time']) {
+    pape.authTime = new Date(params['auth_time']);
+  }
+  return pape;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype._parseProfileExt" id="apidoc.element.passport-steam.super_.prototype._parseProfileExt">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>_parseProfileExt
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseProfileExt = function (params) {
+  var profile = {};
+
+  // parse simple registration parameters
+  profile.displayName = params['fullname'];
+  profile.emails = [{ value: params['email'] }];
+
+  // parse attribute exchange parameters
+  profile.name = { familyName: params['lastname'],
+                   givenName: params['firstname'] };
+  if (!profile.displayName) {
+    if (params['firstname'] &amp;&amp; params['lastname']) {
+      profile.displayName = params['firstname'] + ' ' + params['lastname'];
+    }
+  }
+  if (!profile.emails) {
+    profile.emails = [{ value: params['email'] }];
+  }
+
+  return profile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype.authenticate" id="apidoc.element.passport-steam.super_.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req) {
+
+  if (req.query &amp;&amp; req.query['openid.mode']) {
+    // The request being authenticated contains an `openid.mode` parameter in
+    // the query portion of the URL.  This indicates that the OpenID Provider
+    // is responding to a prior authentication request with either a positive or
+    // negative assertion.  If a positive assertion is received, it will be
+    // verified according to the rules outlined in the OpenID 2.0 specification.
+
+    // NOTE: node-openid (0.3.1), which is used internally, will treat a cancel
+    //       response as an error, setting `err` in the verifyAssertion
+    //       callback.  However, for consistency with Passport semantics, a
+    //       cancel response should be treated as an authentication failure,
+    //       rather than an exceptional error.  As such, this condition is
+    //       trapped and handled prior to being given to node-openid.
+
+    if (req.query['openid.mode'] === 'cancel') { return this.fail({ message: 'OpenID authentication canceled' }); }
+
+    var self = this;
+    this._relyingParty.verifyAssertion(req.url, function(err, result) {
+      if (err) { return self.error(new InternalOpenIDError('Failed to verify assertion', err)); }
+      if (!result.authenticated) { return self.error(new Error('OpenID authentication failed')); }
+
+      var profile = self._parseProfileExt(result);
+      var pape = self._parsePAPEExt(result);
+      var oauth = self._parseOAuthExt(result);
+
+      function verified(err, user, info) {
+        if (err) { return self.error(err); }
+        if (!user) { return self.fail(info); }
+        self.success(user, info);
+      }
+
+
+      var arity = self._verify.length;
+      if (self._passReqToCallback) {
+        if (arity == 6) {
+          self._verify(req, result.claimedIdentifier, profile, pape, oauth, verified);
+        } else if (arity == 5) {
+          self._verify(req, result.claimedIdentifier, profile, pape, verified);
+        } else if (arity == 4 || self._profile) {
+          // self._profile check covers the case where callback uses `arguments`
+          // and arity == 0
+          self._verify(req, result.claimedIdentifier, profile, verified);
+        } else {
+          self._verify(req, result.claimedIdentifier, verified);
+        }
+      } else {
+        if (arity == 5) {
+          self._verify(result.claimedIdentifier, profile, pape, oauth, verified);
+        } else if (arity == 4) {
+          self._verify(result.claimedIdentifier, profile, pape, verified);
+        } else if (arity == 3 || self._profile) {
+          // self._profile check covers the case where callback uses `arguments`
+          // and arity == 0
+          self._verify(result.claimedIdentifier, profile, verified);
+        } else {
+          self._verify(result.claimedIdentifier, verified);
+        }
+      }
+    });
+  } else {
+    // The request being authenticated is initiating OpenID authentication.  By
+    // default, an `openid_identifier` parameter is expected as a parameter,
+    // typically input by a user into a form.
+    //
+    // During the process of initiating OpenID authentication, discovery will be
+    // performed to determine the endpoints used to authenticate with the user's
+    // OpenID provider.  Optionally, and by default, an association will be
+    // established with the OpenID provider which is used to verify subsequent
+    // protocol messages and reduce round trips.
+
+    var identifier = undefined;
+    if (req.body &amp;&amp; req.body[this._identifierField]) {
+      identifier = req.body[this._identifierField];
+    } else if (req.query &amp;&amp; req.query[this._identifierField]) {
+      identifier = req.query[this._identifierField];
+    } else if (this._providerURL) {
+      identifier = this._providerURL;
+    }
+
+    if (!identifier) { return this.fail(new BadRequestError('Missing OpenID identifier')); }
+
+    var self = this;
+    this._relyingParty.authenticate(identifier, false, function(err, providerUrl) {
+      if (err || !providerUrl) { return self.error(new InternalOpenIDError('Failed to discover OP endpoin ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+));
+```
+
+A Steam API key can be obtained at http://steamcommunity.com/dev/apikey. However if you wish not to use an API key, you can include
+ `profile: false` into the SteamStrategy object, which will disable the fetching of user data.
+
+#### Authenticate Requests
+
+Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `'steam'` strategy, to
+authenticate requests.
+
+For example, as route middleware in an [Express](http://expressjs.com/)
+application:
+
+```javascript
+app.get('/auth/steam',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype.loadAssociation" id="apidoc.element.passport-steam.super_.prototype.loadAssociation">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>loadAssociation
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadAssociation = function (fn) {
+  // wrap to allow individual arguments to `done` callback.  this seems more
+  // natural since these were individual arguments to the corresponding
+  // `saveAssociation` function.
+  openid.loadAssociation = function(handle, callback) {
+    fn(handle, function(err, provider, algorithm, secret) {
+      if (err) { return callback(err, null); }
+      var obj = {
+        provider: provider,
+        type: algorithm,
+        secret: secret
+      }
+      return callback(null, obj);
+    });
+  }
+  return this;  // return this for chaining
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype.loadDiscoveredInfo" id="apidoc.element.passport-steam.super_.prototype.loadDiscoveredInfo">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>loadDiscoveredInfo
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadDiscoveredInfo = function (fn) {
+  openid.loadDiscoveredInformation = fn;
+  return this;  // return this for chaining
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype.loadDiscoveredInformation" id="apidoc.element.passport-steam.super_.prototype.loadDiscoveredInformation">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>loadDiscoveredInformation
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadDiscoveredInformation = function (fn) {
+  openid.loadDiscoveredInformation = fn;
+  return this;  // return this for chaining
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype.saveAssociation" id="apidoc.element.passport-steam.super_.prototype.saveAssociation">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>saveAssociation
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveAssociation = function (fn) {
+  // wrap to make `handle` the first argument to `fn`.  this order is more
+  // natural due to the fact that `handle` this is the "key" when subsequently
+  // loading the association.
+  openid.saveAssociation = function(provider, type, handle, secret, expiry, callback) {
+    fn(handle, provider, type, secret, expiry, callback)
+  }
+  return this;  // return this for chaining
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype.saveDiscoveredInfo" id="apidoc.element.passport-steam.super_.prototype.saveDiscoveredInfo">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>saveDiscoveredInfo
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveDiscoveredInfo = function (fn) {
+  openid.saveDiscoveredInformation = fn;
+  return this;  // return this for chaining
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.prototype.saveDiscoveredInformation" id="apidoc.element.passport-steam.super_.prototype.saveDiscoveredInformation">
+        function <span class="apidocSignatureSpan">passport-steam.super_.prototype.</span>saveDiscoveredInformation
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveDiscoveredInformation = function (fn) {
+  openid.saveDiscoveredInformation = fn;
+  return this;  // return this for chaining
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-steam.super_.super_" id="apidoc.module.passport-steam.super_.super_">module passport-steam.super_.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.super_.super_" id="apidoc.element.passport-steam.super_.super_.super_">
+        function <span class="apidocSignatureSpan">passport-steam.super_.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.super_.Strategy" id="apidoc.element.passport-steam.super_.super_.Strategy">
+        function <span class="apidocSignatureSpan">passport-steam.super_.super_.</span>Strategy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-steam.super_.super_.prototype" id="apidoc.module.passport-steam.super_.super_.prototype">module passport-steam.super_.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-steam.super_.super_.prototype.authenticate" id="apidoc.element.passport-steam.super_.super_.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-steam.super_.super_.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  throw new Error('Strategy#authenticate must be overridden by subclass');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+));
+```
+
+A Steam API key can be obtained at http://steamcommunity.com/dev/apikey. However if you wish not to use an API key, you can include
+ `profile: false` into the SteamStrategy object, which will disable the fetching of user data.
+
+#### Authenticate Requests
+
+Use `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `'steam'` strategy, to
+authenticate requests.
+
+For example, as route middleware in an [Express](http://expressjs.com/)
+application:
+
+```javascript
+app.get('/auth/steam',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
